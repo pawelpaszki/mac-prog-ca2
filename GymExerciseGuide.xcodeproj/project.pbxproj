@@ -33,6 +33,7 @@
 		1359B120207413E2000FA083 /* favouriteSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1359B10E207413E2000FA083 /* favouriteSelected@3x.png */; };
 		1359B121207413E2000FA083 /* infoSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1359B10F207413E2000FA083 /* infoSelected@3x.png */; };
 		1359B122207413E2000FA083 /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1359B110207413E2000FA083 /* info@3x.png */; };
+		1359B12420741AC5000FA083 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359B12320741AC5000FA083 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		1359B10E207413E2000FA083 /* favouriteSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favouriteSelected@3x.png"; sourceTree = "<group>"; };
 		1359B10F207413E2000FA083 /* infoSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoSelected@3x.png"; sourceTree = "<group>"; };
 		1359B110207413E2000FA083 /* info@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@3x.png"; sourceTree = "<group>"; };
+		1359B12320741AC5000FA083 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				1359B0B920740787000FA083 /* LaunchScreen.storyboard */,
 				1359B0BC20740787000FA083 /* Info.plist */,
 				1359B0F620740BAF000FA083 /* TabBarController.swift */,
+				1359B12320741AC5000FA083 /* PageViewController.swift */,
 			);
 			path = GymExerciseGuide;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				1359B0F720740BAF000FA083 /* TabBarController.swift in Sources */,
 				1359B0B320740787000FA083 /* ViewController.swift in Sources */,
 				1359B0B120740787000FA083 /* AppDelegate.swift in Sources */,
+				1359B12420741AC5000FA083 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

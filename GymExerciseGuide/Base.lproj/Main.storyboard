@@ -10,47 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="MXB-0A-Zwu">
-            <objects>
-                <viewController id="vzY-ut-io1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rrp-vy-wDa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="5tw-ya-BGx"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="favourite.png" id="gaZ-WK-4Vp">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="favouriteSelected"/>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IUZ-7h-Z2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="670" y="-627"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zJt-0s-gf2">
-            <objects>
-                <viewController id="3E1-jy-1Mr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ofc-gS-Yxw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="TVs-ah-u6v"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="muscles.png" id="85f-aB-e80">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="musclesSelected"/>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VD4-Wm-duO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="670" y="32"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ahu-do-ZAh">
             <objects>
@@ -62,34 +21,149 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3E1-jy-1Mr" kind="relationship" relationship="viewControllers" id="Lag-9B-OF3"/>
-                        <segue destination="vzY-ut-io1" kind="relationship" relationship="viewControllers" id="ohA-bf-1nO"/>
-                        <segue destination="0rL-uy-XLA" kind="relationship" relationship="viewControllers" id="MX2-zX-8AM"/>
+                        <segue destination="rTy-TL-0OQ" kind="relationship" relationship="viewControllers" id="OpI-mY-J2L"/>
+                        <segue destination="feC-bi-PzJ" kind="relationship" relationship="viewControllers" id="nur-8S-uRJ"/>
+                        <segue destination="8aq-bK-Hvu" kind="relationship" relationship="viewControllers" id="Ko9-ix-VWz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vb0-rG-S40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-338" y="32"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="29B-03-Bhh">
+        <!--Muscles-->
+        <scene sceneID="2lh-Kl-V7b">
             <objects>
-                <viewController id="0rL-uy-XLA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="joU-tm-2iq">
+                <collectionViewController id="rTy-TL-0OQ" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="86Z-7j-8Nt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="prI-vY-sfb"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eMJ-2z-vBv">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="j3P-nR-DTn">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="rTy-TL-0OQ" id="QjR-2p-CYl"/>
+                            <outlet property="delegate" destination="rTy-TL-0OQ" id="frc-mZ-Dev"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Muscles" image="muscles.png" id="0CO-a1-Cwx">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="musclesSelected"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHG-OV-JkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="-669"/>
+        </scene>
+        <!--Favourites-->
+        <scene sceneID="vxO-S2-SRP">
+            <objects>
+                <tableViewController id="feC-bi-PzJ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gpA-EG-8ds">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PMM-Sc-v8y">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PMM-Sc-v8y" id="6YV-Lb-L6H">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="feC-bi-PzJ" id="waf-LA-QRR"/>
+                            <outlet property="delegate" destination="feC-bi-PzJ" id="ebA-Hd-tST"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Favourites" image="favourite.png" id="q5T-2d-bXc">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="favouriteSelected"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4h-Z7-87t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="32"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZR5-JZ-uQ5">
+            <objects>
+                <viewController storyboardIdentifier="About1" id="Y5N-sQ-jNT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="upp-kw-wzE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG9-Js-TO7">
+                                <rect key="frame" x="155" y="384" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="swu-W9-th5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="info.png" id="qMT-Ru-M46">
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxv-uh-C39" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.8" y="138.98050974512745"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="rjg-DW-ypc">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="pageSheet" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="8aq-bK-Hvu" customClass="PageViewController" customModule="GymExerciseGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="About" image="info.png" id="bIN-i5-GCd">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="infoSelected"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3vi-sZ-6jF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvm-gb-Rih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670" y="757"/>
+            <point key="canvasLocation" x="670" y="740"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AHa-As-LtX">
+            <objects>
+                <viewController storyboardIdentifier="About2" id="OPZ-i3-tgw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GUY-pJ-Dow">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mo2-MY-Tdk">
+                                <rect key="frame" x="156" y="240" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tU4-aM-I1d"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KoZ-Pf-ECn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="866"/>
         </scene>
     </scenes>
     <resources>
