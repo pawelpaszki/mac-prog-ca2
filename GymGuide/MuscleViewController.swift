@@ -22,11 +22,6 @@ struct Exercise: Codable {
     let favourite:Bool
 }
 
-enum Result<Value> {
-    case success(Value)
-    case failure(Error)
-}
-
 class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var collectionView: UICollectionView!
@@ -45,9 +40,9 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
-        
         let muscle: Muscle = muscles[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
         
         let url = URL(string: muscle.imageURL)
         
@@ -59,10 +54,25 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
             cell.displayContent(image: image, title: muscle.name)
         }
         
-        
+        cell.tapHandler = {
+            self.performSegue(withIdentifier: "showExercises", sender: self.muscles[indexPath.row].name)
+            //print(self.muscles[indexPath.row].name)
+        }
         
         return cell
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let muscleName = sender as? String
+        for muscle in self.muscles {
+            if muscleName == muscle.name {
+                if let vc: ExerciseListViewController = segue.destination as? ExerciseListViewController {
+                    vc.muscle = muscle
+                    break
+                }
+                
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -137,7 +147,6 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                             }
                         }
                         self.muscles.append(newMuscle)
-                        print(newMuscle)
                     }
                     DispatchQueue.main.async {
                         self.collectionView.reloadData()

@@ -35,6 +35,7 @@
 		13761CC12074C9D900BD720E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CC02074C9D900BD720E /* AboutViewController.swift */; };
 		13761CC32074CA7100BD720E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CC22074CA7100BD720E /* TabBarController.swift */; };
 		13761CC920750AAC00BD720E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CC820750AAC00BD720E /* CollectionViewCell.swift */; };
+		13761CCB207559FF00BD720E /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CCA207559FF00BD720E /* ExerciseListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		13761CC02074C9D900BD720E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		13761CC22074CA7100BD720E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		13761CC820750AAC00BD720E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		13761CCA207559FF00BD720E /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				13761CC02074C9D900BD720E /* AboutViewController.swift */,
 				13761CC22074CA7100BD720E /* TabBarController.swift */,
 				13761CC820750AAC00BD720E /* CollectionViewCell.swift */,
+				13761CCA207559FF00BD720E /* ExerciseListViewController.swift */,
 			);
 			path = GymGuide;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13761CCB207559FF00BD720E /* ExerciseListViewController.swift in Sources */,
 				13761CC920750AAC00BD720E /* CollectionViewCell.swift in Sources */,
 				13761CC12074C9D900BD720E /* AboutViewController.swift in Sources */,
 				13761CC32074CA7100BD720E /* TabBarController.swift in Sources */,
