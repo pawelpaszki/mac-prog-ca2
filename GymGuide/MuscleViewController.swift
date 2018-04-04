@@ -49,7 +49,17 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let muscle: Muscle = muscles[indexPath.row]
         
-        cell.displayContent(image: UIImage(named: "info")!, title: muscle.name)
+        let url = URL(string: muscle.imageURL)
+        
+        var image:UIImage = UIImage(named: "info")!
+        
+        let data = try? Data(contentsOf: url!)
+        DispatchQueue.main.async {
+            image = UIImage(data: data!)!
+            cell.displayContent(image: image, title: muscle.name)
+        }
+        
+        
         
         return cell
         
