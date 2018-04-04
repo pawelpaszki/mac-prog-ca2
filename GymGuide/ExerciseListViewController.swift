@@ -7,6 +7,16 @@
 //
 import UIKit
 
+extension UIViewController {
+    func performSegueToReturnBack()  {
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: false, completion: nil)
+        }
+    }
+}
+
 class ExerciseListViewController: UIViewController {
     
     var muscle: Muscle!
@@ -19,10 +29,11 @@ class ExerciseListViewController: UIViewController {
     }
     @IBOutlet weak var navTopBar: UINavigationItem!
     
-    @IBOutlet weak var tabBar: UITabBar!
     override func viewWillAppear(_ animated: Bool) {
         self.navTopBar.title = muscle.name
-        self.tabBar.unselectedItemTintColor = UIColor.white
+    }
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.performSegueToReturnBack()
     }
 }
 
