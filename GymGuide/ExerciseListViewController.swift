@@ -17,12 +17,13 @@ extension UIViewController {
     }
 }
 
-class ExerciseListViewController: UIViewController {
+class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var muscle: Muscle!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,8 +33,49 @@ class ExerciseListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navTopBar.title = muscle.name
     }
+    
     @IBAction func backPressed(_ sender: UIButton) {
         self.performSegueToReturnBack()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return muscle.exercises.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        var exercise: Exercise = muscle.exercises[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! ExerciseCollectionViewCell
+        
+        let url = URL(string: exercise.imageURL)
+        
+        var image:UIImage = UIImage(named: "info")!
+        
+        let data = try? Data(contentsOf: url!)
+        DispatchQueue.main.async {
+            image = UIImage(data: data!)!
+            cell.displayContent(image: image, title: exercise.name)
+        }
+        
+        cell.tapHandler = {
+            self.performSegue(withIdentifier: "showExercise", sender: self.muscle.exercises[indexPath.row].name)
+            //print(self.muscles[indexPath.row].name)
+        }
+        
+        return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let exerciseName = sender as? String
+        for exercise in self.muscle.exercises {
+            if exerciseName == exercise.name {
+                if let vc: ExerciseViewController = segue.destination as? ExerciseViewController {
+                    vc.exercise = exercise
+                    break
+                }
+            }
+        }
     }
 }
 

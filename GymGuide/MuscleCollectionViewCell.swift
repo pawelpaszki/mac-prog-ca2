@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class MuscleCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var muscleImage: UIImageView!
     @IBOutlet var muscleLabel: UILabel!

@@ -42,7 +42,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let muscle: Muscle = muscles[indexPath.row]
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! MuscleCollectionViewCell
         
         let url = URL(string: muscle.imageURL)
         
@@ -77,6 +77,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Muscle groups"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "HoeflerText-BlackItalic", size: 24)!]
     }
 
     override func didReceiveMemoryWarning() {

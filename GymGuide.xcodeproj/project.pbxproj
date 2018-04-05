@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1348580B207637E4006628A7 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1348580A207637E4006628A7 /* ExerciseViewController.swift */; };
 		13761C6E2074C7BB00BD720E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761C6D2074C7BB00BD720E /* AppDelegate.swift */; };
 		13761C702074C7BB00BD720E /* MuscleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761C6F2074C7BB00BD720E /* MuscleViewController.swift */; };
 		13761C732074C7BB00BD720E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13761C712074C7BB00BD720E /* Main.storyboard */; };
@@ -34,8 +35,9 @@
 		13761CBF2074C8D800BD720E /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13761CAD2074C8D800BD720E /* info@3x.png */; };
 		13761CC12074C9D900BD720E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CC02074C9D900BD720E /* AboutViewController.swift */; };
 		13761CC32074CA7100BD720E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CC22074CA7100BD720E /* TabBarController.swift */; };
-		13761CC920750AAC00BD720E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CC820750AAC00BD720E /* CollectionViewCell.swift */; };
+		13761CC920750AAC00BD720E /* MuscleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CC820750AAC00BD720E /* MuscleCollectionViewCell.swift */; };
 		13761CCB207559FF00BD720E /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CCA207559FF00BD720E /* ExerciseListViewController.swift */; };
+		13761CCD2075741000BD720E /* ExerciseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CCC2075741000BD720E /* ExerciseCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1348580A207637E4006628A7 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		13761C6A2074C7BB00BD720E /* GymGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13761C6D2074C7BB00BD720E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13761C6F2074C7BB00BD720E /* MuscleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleViewController.swift; sourceTree = "<group>"; };
@@ -89,8 +92,9 @@
 		13761CAD2074C8D800BD720E /* info@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@3x.png"; path = "../../../../../Downloads/info@3x.png"; sourceTree = "<group>"; };
 		13761CC02074C9D900BD720E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		13761CC22074CA7100BD720E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		13761CC820750AAC00BD720E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		13761CC820750AAC00BD720E /* MuscleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleCollectionViewCell.swift; sourceTree = "<group>"; };
 		13761CCA207559FF00BD720E /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
+		13761CCC2075741000BD720E /* ExerciseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +154,10 @@
 				13761C792074C7BB00BD720E /* Info.plist */,
 				13761CC02074C9D900BD720E /* AboutViewController.swift */,
 				13761CC22074CA7100BD720E /* TabBarController.swift */,
-				13761CC820750AAC00BD720E /* CollectionViewCell.swift */,
+				13761CC820750AAC00BD720E /* MuscleCollectionViewCell.swift */,
 				13761CCA207559FF00BD720E /* ExerciseListViewController.swift */,
+				13761CCC2075741000BD720E /* ExerciseCollectionViewCell.swift */,
+				1348580A207637E4006628A7 /* ExerciseViewController.swift */,
 			);
 			path = GymGuide;
 			sourceTree = "<group>";
@@ -352,10 +358,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				13761CCB207559FF00BD720E /* ExerciseListViewController.swift in Sources */,
-				13761CC920750AAC00BD720E /* CollectionViewCell.swift in Sources */,
+				13761CC920750AAC00BD720E /* MuscleCollectionViewCell.swift in Sources */,
+				13761CCD2075741000BD720E /* ExerciseCollectionViewCell.swift in Sources */,
 				13761CC12074C9D900BD720E /* AboutViewController.swift in Sources */,
 				13761CC32074CA7100BD720E /* TabBarController.swift in Sources */,
 				13761C702074C7BB00BD720E /* MuscleViewController.swift in Sources */,
+				1348580B207637E4006628A7 /* ExerciseViewController.swift in Sources */,
 				13761C6E2074C7BB00BD720E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
