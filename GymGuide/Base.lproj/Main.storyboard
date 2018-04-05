@@ -380,7 +380,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Exercise" id="il5-lL-tvd">
-                                        <barButtonItem key="leftBarButtonItem" width="40" style="plain" id="vAZ-Uz-YbX">
+                                        <barButtonItem key="leftBarButtonItem" width="40" style="done" id="vAZ-Uz-YbX">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xj2-Nd-zot">
                                                 <rect key="frame" x="20" y="9.6666666666666643" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -392,6 +392,9 @@
                                                     <action selector="backPressed:" destination="nr8-K8-8Qb" eventType="touchUpInside" id="wzV-hI-o4K"/>
                                                 </connections>
                                             </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="favourite.png" id="80R-8q-42Z">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -456,6 +459,7 @@
                     </view>
                     <connections>
                         <outlet property="descLabel" destination="eu7-Ht-4kb" id="cUd-rI-QtS"/>
+                        <outlet property="favIndicator" destination="80R-8q-42Z" id="g0o-7V-mls"/>
                         <outlet property="navTopBar" destination="il5-lL-tvd" id="ycE-x1-VYw"/>
                         <outlet property="playerView" destination="67x-jp-kS4" id="zVp-mn-JWC"/>
                     </connections>

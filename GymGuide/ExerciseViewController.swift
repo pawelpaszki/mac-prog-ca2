@@ -25,6 +25,7 @@ class ExerciseViewController: UIViewController {
             self.dismiss(animated: false, completion: nil)
         }
     }
+    @IBOutlet weak var favIndicator: UIBarButtonItem!
     
     @IBOutlet weak var navTopBar: UINavigationItem!
     
@@ -40,6 +41,9 @@ class ExerciseViewController: UIViewController {
         self.descLabel.text = descriptionText
         self.descLabel.sizeToFit()
         playerView.loadVideoID(exercise.videoURL)
+        if self.exercise.favourite == true {
+            favIndicator.image = UIImage(named: "favouriteSelected")
+        }
     }
     
     @IBOutlet weak var descLabel: UILabel!
