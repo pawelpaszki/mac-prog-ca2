@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aBz-aT-ZYV">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,11 +22,11 @@
             <objects>
                 <viewController id="Xjc-t0-tML" customClass="MuscleViewController" customModule="GymGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8CZ-16-1YS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXk-fQ-i36">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,7 +36,7 @@
                                 </items>
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uce-iW-0rX">
-                                <rect key="frame" x="20" y="84" width="335" height="514"/>
+                                <rect key="frame" x="20" y="84" width="374" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="45" minimumInteritemSpacing="5" id="ma1-4A-AAw">
                                     <size key="itemSize" width="163" height="163"/>
@@ -155,7 +157,7 @@
             <objects>
                 <viewController storyboardIdentifier="About1" id="O3R-Tn-HG1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qON-Z9-GPF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oj-hh-P4v">
@@ -166,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f8K-EM-gKt">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
@@ -190,7 +192,7 @@
             <objects>
                 <viewController storyboardIdentifier="About2" id="MBV-s5-XTY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mBB-gu-y2c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glI-C2-F2W">
@@ -201,7 +203,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-ZD-CoY">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
@@ -225,11 +227,11 @@
             <objects>
                 <viewController id="kfC-oE-HM7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ni9-aO-s7v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yb-Xi-8nR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
@@ -258,11 +260,11 @@
             <objects>
                 <viewController id="lRE-w5-vPo" customClass="ExerciseListViewController" customModule="GymGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mOS-R1-bak">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TaK-3T-WpA">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -271,7 +273,7 @@
                                     <navigationItem title="Muscle Group" id="07L-zY-fxJ">
                                         <barButtonItem key="leftBarButtonItem" style="done" id="1gn-kZ-osG">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qC9-Ze-aOE">
-                                                <rect key="frame" x="16" y="9.5" width="25" height="25"/>
+                                                <rect key="frame" x="20" y="9.6666666666666643" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="back.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -285,7 +287,7 @@
                                 </items>
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uc9-ci-RTI">
-                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <rect key="frame" x="20" y="84" width="374" height="632"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="45" minimumInteritemSpacing="5" id="Fgd-YB-BgP">
                                     <size key="itemSize" width="163" height="163"/>
@@ -367,20 +369,20 @@
             <objects>
                 <viewController id="nr8-K8-8Qb" customClass="ExerciseViewController" customModule="GymGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uft-Ar-AGE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZI-q9-eZR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Muscle Group" id="il5-lL-tvd">
+                                    <navigationItem title="Exercise" id="il5-lL-tvd">
                                         <barButtonItem key="leftBarButtonItem" width="40" style="plain" id="vAZ-Uz-YbX">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xj2-Nd-zot">
-                                                <rect key="frame" x="16" y="9.5" width="25" height="25"/>
+                                                <rect key="frame" x="20" y="9.6666666666666643" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="back.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -394,22 +396,72 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCi-2I-g3d">
+                                <rect key="frame" x="0.0" y="64" width="414" height="652"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SM5-N5-NqZ">
+                                        <rect key="frame" x="8" y="8" width="398" height="413"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="60" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu7-Ht-4kb">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="127"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="127" id="Doc-ti-yLi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="eu7-Ht-4kb" firstAttribute="centerX" secondItem="SM5-N5-NqZ" secondAttribute="centerX" id="0n6-9h-7bf"/>
+                                            <constraint firstAttribute="height" constant="413" id="7Ju-Az-f6f"/>
+                                            <constraint firstAttribute="bottom" secondItem="eu7-Ht-4kb" secondAttribute="bottom" constant="286" id="Hz5-2R-Dc7"/>
+                                            <constraint firstItem="eu7-Ht-4kb" firstAttribute="top" secondItem="SM5-N5-NqZ" secondAttribute="top" id="TWE-xP-9EC"/>
+                                            <constraint firstItem="eu7-Ht-4kb" firstAttribute="leading" secondItem="SM5-N5-NqZ" secondAttribute="leading" id="YYx-7X-H5U"/>
+                                            <constraint firstAttribute="trailing" secondItem="eu7-Ht-4kb" secondAttribute="trailing" id="Ytu-Zm-N58"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67x-jp-kS4" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                        <rect key="frame" x="8" y="431" width="398" height="224"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="67x-jp-kS4" secondAttribute="height" multiplier="16:9" id="nKi-4G-WdD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="67x-jp-kS4" firstAttribute="top" secondItem="SM5-N5-NqZ" secondAttribute="bottom" constant="10" id="F3U-3c-zY1"/>
+                                    <constraint firstAttribute="bottom" secondItem="SM5-N5-NqZ" secondAttribute="bottom" constant="231" id="JGT-GD-tgA"/>
+                                    <constraint firstItem="SM5-N5-NqZ" firstAttribute="top" secondItem="gCi-2I-g3d" secondAttribute="topMargin" id="Vu0-a9-X2j"/>
+                                    <constraint firstItem="SM5-N5-NqZ" firstAttribute="trailing" secondItem="gCi-2I-g3d" secondAttribute="trailingMargin" id="Yep-pS-uBO"/>
+                                    <constraint firstItem="SM5-N5-NqZ" firstAttribute="leading" secondItem="67x-jp-kS4" secondAttribute="leading" id="Yqc-0f-gpg"/>
+                                    <constraint firstItem="SM5-N5-NqZ" firstAttribute="trailing" secondItem="67x-jp-kS4" secondAttribute="trailing" id="aS4-Lq-hFm"/>
+                                    <constraint firstItem="SM5-N5-NqZ" firstAttribute="centerX" secondItem="gCi-2I-g3d" secondAttribute="centerX" id="asv-Te-K7T"/>
+                                    <constraint firstItem="SM5-N5-NqZ" firstAttribute="leading" secondItem="gCi-2I-g3d" secondAttribute="leadingMargin" id="cpT-BP-rL9"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dZI-q9-eZR" firstAttribute="top" secondItem="xRO-Sj-WIK" secondAttribute="top" id="5xV-kk-kjS"/>
                             <constraint firstItem="dZI-q9-eZR" firstAttribute="leading" secondItem="xRO-Sj-WIK" secondAttribute="leading" id="Igj-kO-GqL"/>
+                            <constraint firstItem="gCi-2I-g3d" firstAttribute="top" secondItem="dZI-q9-eZR" secondAttribute="bottom" id="SfV-8M-7gG"/>
+                            <constraint firstItem="gCi-2I-g3d" firstAttribute="centerX" secondItem="dZI-q9-eZR" secondAttribute="centerX" id="fQC-6f-yZw"/>
+                            <constraint firstItem="xRO-Sj-WIK" firstAttribute="bottom" secondItem="gCi-2I-g3d" secondAttribute="bottom" constant="20" id="kft-fU-pkO"/>
+                            <constraint firstItem="xRO-Sj-WIK" firstAttribute="trailing" secondItem="gCi-2I-g3d" secondAttribute="trailing" id="qvz-v0-Ccp"/>
                             <constraint firstItem="xRO-Sj-WIK" firstAttribute="trailing" secondItem="dZI-q9-eZR" secondAttribute="trailing" id="uD9-V3-yG7"/>
+                            <constraint firstItem="gCi-2I-g3d" firstAttribute="leading" secondItem="xRO-Sj-WIK" secondAttribute="leading" id="wYa-X8-vRX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xRO-Sj-WIK"/>
                     </view>
                     <connections>
+                        <outlet property="descLabel" destination="eu7-Ht-4kb" id="cUd-rI-QtS"/>
                         <outlet property="navTopBar" destination="il5-lL-tvd" id="ycE-x1-VYw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Sk-6K-lGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2065" y="-809"/>
+            <point key="canvasLocation" x="2063.768115942029" y="-809.51086956521749"/>
         </scene>
     </scenes>
     <resources>

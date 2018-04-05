@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YouTubePlayer
 
 class ExerciseViewController: UIViewController {
     
@@ -14,6 +15,9 @@ class ExerciseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBOutlet var playerView: YouTubePlayerView!
+    
     @IBAction func backPressed(_ sender: Any) {
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
@@ -26,5 +30,17 @@ class ExerciseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navTopBar.title = exercise.name
+        print(exercise.description)
+        var descriptionText: String = ""
+        for (index, _) in exercise.description.enumerated() {
+            let desc: String = exercise.description[index]
+            let i = String(index + 1)
+            descriptionText += i + ". " + desc + "\n\n"
+        }
+        self.descLabel.text = descriptionText
+        self.descLabel.sizeToFit()
     }
+    
+    @IBOutlet weak var descLabel: UILabel!
+    
 }
