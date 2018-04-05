@@ -39,6 +39,7 @@ class ExerciseViewController: UIViewController {
         }
         self.descLabel.text = descriptionText
         self.descLabel.sizeToFit()
+        playerView.loadVideoID(exercise.videoURL)
     }
     
     @IBOutlet weak var descLabel: UILabel!

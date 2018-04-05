@@ -402,7 +402,7 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SM5-N5-NqZ">
                                         <rect key="frame" x="8" y="8" width="398" height="413"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="60" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu7-Ht-4kb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu7-Ht-4kb">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="127"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="127" id="Doc-ti-yLi"/>
@@ -417,7 +417,7 @@
                                             <constraint firstAttribute="height" constant="413" id="7Ju-Az-f6f"/>
                                             <constraint firstAttribute="bottom" secondItem="eu7-Ht-4kb" secondAttribute="bottom" constant="286" id="Hz5-2R-Dc7"/>
                                             <constraint firstItem="eu7-Ht-4kb" firstAttribute="top" secondItem="SM5-N5-NqZ" secondAttribute="top" id="TWE-xP-9EC"/>
-                                            <constraint firstItem="eu7-Ht-4kb" firstAttribute="leading" secondItem="SM5-N5-NqZ" secondAttribute="leading" id="YYx-7X-H5U"/>
+                                            <constraint firstItem="eu7-Ht-4kb" firstAttribute="left" secondItem="SM5-N5-NqZ" secondAttribute="left" id="YYx-7X-H5U"/>
                                             <constraint firstAttribute="trailing" secondItem="eu7-Ht-4kb" secondAttribute="trailing" id="Ytu-Zm-N58"/>
                                         </constraints>
                                     </scrollView>
@@ -457,6 +457,7 @@
                     <connections>
                         <outlet property="descLabel" destination="eu7-Ht-4kb" id="cUd-rI-QtS"/>
                         <outlet property="navTopBar" destination="il5-lL-tvd" id="ycE-x1-VYw"/>
+                        <outlet property="playerView" destination="67x-jp-kS4" id="zVp-mn-JWC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Sk-6K-lGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
