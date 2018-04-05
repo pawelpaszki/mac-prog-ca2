@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1348580B207637E4006628A7 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1348580A207637E4006628A7 /* ExerciseViewController.swift */; };
+		13485810207641D6006628A7 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1348580D207641D5006628A7 /* back@2x.png */; };
+		13485811207641D6006628A7 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1348580E207641D5006628A7 /* back@3x.png */; };
+		13485812207641D6006628A7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 1348580F207641D6006628A7 /* back.png */; };
 		13761C6E2074C7BB00BD720E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761C6D2074C7BB00BD720E /* AppDelegate.swift */; };
 		13761C702074C7BB00BD720E /* MuscleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761C6F2074C7BB00BD720E /* MuscleViewController.swift */; };
 		13761C732074C7BB00BD720E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13761C712074C7BB00BD720E /* Main.storyboard */; };
@@ -59,6 +62,9 @@
 
 /* Begin PBXFileReference section */
 		1348580A207637E4006628A7 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		1348580D207641D5006628A7 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		1348580E207641D5006628A7 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		1348580F207641D6006628A7 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		13761C6A2074C7BB00BD720E /* GymGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13761C6D2074C7BB00BD720E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13761C6F2074C7BB00BD720E /* MuscleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleViewController.swift; sourceTree = "<group>"; };
@@ -122,9 +128,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1348580C207641BF006628A7 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				1348580F207641D6006628A7 /* back.png */,
+				1348580D207641D5006628A7 /* back@2x.png */,
+				1348580E207641D5006628A7 /* back@3x.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
 		13761C612074C7BA00BD720E = {
 			isa = PBXGroup;
 			children = (
+				1348580C207641BF006628A7 /* icons */,
 				13761C9B2074C8CA00BD720E /* tabIcons */,
 				13761C6C2074C7BB00BD720E /* GymGuide */,
 				13761C812074C7BB00BD720E /* GymGuideTests */,
@@ -315,6 +332,7 @@
 				13761CB32074C8D800BD720E /* muscles.png in Resources */,
 				13761CB22074C8D800BD720E /* infoSelected.png in Resources */,
 				13761CB02074C8D800BD720E /* favouriteSelected.png in Resources */,
+				13485811207641D6006628A7 /* back@3x.png in Resources */,
 				13761CBD2074C8D800BD720E /* favouriteSelected@3x.png in Resources */,
 				13761CB52074C8D800BD720E /* info.png in Resources */,
 				13761CB42074C8D800BD720E /* favourite.png in Resources */,
@@ -323,6 +341,7 @@
 				13761C782074C7BB00BD720E /* LaunchScreen.storyboard in Resources */,
 				13761CAF2074C8D800BD720E /* musclesSelected@3x.png in Resources */,
 				13761CB62074C8D800BD720E /* favouriteSelected@2x.png in Resources */,
+				13485810207641D6006628A7 /* back@2x.png in Resources */,
 				13761CBA2074C8D800BD720E /* muscles@3x.png in Resources */,
 				13761C752074C7BB00BD720E /* Assets.xcassets in Resources */,
 				13761CB72074C8D800BD720E /* muscles@2x.png in Resources */,
@@ -330,6 +349,7 @@
 				13761CBB2074C8D800BD720E /* favourite@2x.png in Resources */,
 				13761CBC2074C8D800BD720E /* favourite@3x.png in Resources */,
 				13761CAE2074C8D800BD720E /* musclesSelected.png in Resources */,
+				13485812207641D6006628A7 /* back.png in Resources */,
 				13761CB82074C8D800BD720E /* info@2x.png in Resources */,
 				13761CB92074C8D800BD720E /* infoSelected@2x.png in Resources */,
 				13761CB12074C8D800BD720E /* musclesSelected@2x.png in Resources */,

@@ -269,12 +269,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Muscle Group" id="07L-zY-fxJ">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="1gn-kZ-osG">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qC9-Ze-aOE">
-                                                <rect key="frame" x="16" y="7" width="98" height="30"/>
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="1gn-kZ-osG">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qC9-Ze-aOE">
+                                                <rect key="frame" x="16" y="9.5" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Back">
+                                                <state key="normal" image="back.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -302,7 +301,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="163" height="163"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-eJ-iSL">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-eJ-iSL">
                                                     <rect key="frame" x="0.0" y="133" width="163" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="12"/>
@@ -379,12 +378,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Muscle Group" id="il5-lL-tvd">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="vAZ-Uz-YbX">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xj2-Nd-zot">
-                                                <rect key="frame" x="16" y="7" width="98" height="30"/>
+                                        <barButtonItem key="leftBarButtonItem" width="40" style="plain" id="vAZ-Uz-YbX">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xj2-Nd-zot">
+                                                <rect key="frame" x="16" y="9.5" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Back">
+                                                <state key="normal" image="back.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -415,6 +413,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back.png" width="25" height="25"/>
         <image name="favourite.png" width="25" height="25"/>
         <image name="favouriteSelected" width="16" height="16"/>
         <image name="info.png" width="25" height="25"/>

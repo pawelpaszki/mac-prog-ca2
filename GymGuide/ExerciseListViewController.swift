@@ -44,7 +44,7 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var exercise: Exercise = muscle.exercises[indexPath.row]
+        let exercise: Exercise = muscle.exercises[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! ExerciseCollectionViewCell
         
