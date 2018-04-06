@@ -55,7 +55,7 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
         let data = try? Data(contentsOf: url!)
         DispatchQueue.main.async {
             image = UIImage(data: data!)!
-            cell.displayContent(image: image, title: exercise.name)
+            cell.displayContent(image: image, title: exercise.name, isDefault: exercise.isDefault)
         }
         
         cell.tapHandler = {

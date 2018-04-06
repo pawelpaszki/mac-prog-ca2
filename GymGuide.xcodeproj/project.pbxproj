@@ -43,6 +43,12 @@
 		13761CC920750AAC00BD720E /* MuscleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CC820750AAC00BD720E /* MuscleCollectionViewCell.swift */; };
 		13761CCB207559FF00BD720E /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CCA207559FF00BD720E /* ExerciseListViewController.swift */; };
 		13761CCD2075741000BD720E /* ExerciseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CCC2075741000BD720E /* ExerciseCollectionViewCell.swift */; };
+		13E36ADE2077BABC00C3EE2A /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36AD82077BAB800C3EE2A /* cancel@2x.png */; };
+		13E36ADF2077BABC00C3EE2A /* delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36AD92077BAB900C3EE2A /* delete@3x.png */; };
+		13E36AE02077BABC00C3EE2A /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36ADA2077BABA00C3EE2A /* cancel.png */; };
+		13E36AE12077BABC00C3EE2A /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36ADB2077BABA00C3EE2A /* delete.png */; };
+		13E36AE22077BABC00C3EE2A /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36ADC2077BABB00C3EE2A /* delete@2x.png */; };
+		13E36AE32077BABC00C3EE2A /* cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36ADD2077BABC00C3EE2A /* cancel@3x.png */; };
 		54699ED8788EA504C6AE18E5 /* Pods_GymGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F8A72EF233446904ECB8C9 /* Pods_GymGuide.framework */; };
 		6DB527EC8C89C5D49F262EC8 /* Pods_GymGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5CED523ABF23DD54941F08 /* Pods_GymGuideTests.framework */; };
 		D865B1282079118EAA1A6308 /* Pods_GymGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FFF337DA4B8715F5DDD447 /* Pods_GymGuideUITests.framework */; };
@@ -109,6 +115,12 @@
 		13761CC820750AAC00BD720E /* MuscleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleCollectionViewCell.swift; sourceTree = "<group>"; };
 		13761CCA207559FF00BD720E /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
 		13761CCC2075741000BD720E /* ExerciseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewCell.swift; sourceTree = "<group>"; };
+		13E36AD82077BAB800C3EE2A /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		13E36AD92077BAB900C3EE2A /* delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@3x.png"; sourceTree = "<group>"; };
+		13E36ADA2077BABA00C3EE2A /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		13E36ADB2077BABA00C3EE2A /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		13E36ADC2077BABB00C3EE2A /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
+		13E36ADD2077BABC00C3EE2A /* cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@3x.png"; sourceTree = "<group>"; };
 		17FFF337DA4B8715F5DDD447 /* Pods_GymGuideUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymGuideUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7277786540A636D36CB72378 /* Pods-GymGuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymGuideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymGuideUITests/Pods-GymGuideUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8B5CED523ABF23DD54941F08 /* Pods_GymGuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymGuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +162,12 @@
 		1348580C207641BF006628A7 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				13E36ADA2077BABA00C3EE2A /* cancel.png */,
+				13E36AD82077BAB800C3EE2A /* cancel@2x.png */,
+				13E36ADD2077BABC00C3EE2A /* cancel@3x.png */,
+				13E36ADB2077BABA00C3EE2A /* delete.png */,
+				13E36ADC2077BABB00C3EE2A /* delete@2x.png */,
+				13E36AD92077BAB900C3EE2A /* delete@3x.png */,
 				1348580F207641D6006628A7 /* back.png */,
 				1348580D207641D5006628A7 /* back@2x.png */,
 				1348580E207641D5006628A7 /* back@3x.png */,
@@ -388,7 +406,10 @@
 				13761CB22074C8D800BD720E /* infoSelected.png in Resources */,
 				13761CB02074C8D800BD720E /* favouriteSelected.png in Resources */,
 				13485811207641D6006628A7 /* back@3x.png in Resources */,
+				13E36AE12077BABC00C3EE2A /* delete.png in Resources */,
+				13E36ADF2077BABC00C3EE2A /* delete@3x.png in Resources */,
 				13761CBD2074C8D800BD720E /* favouriteSelected@3x.png in Resources */,
+				13E36AE02077BABC00C3EE2A /* cancel.png in Resources */,
 				13761CB52074C8D800BD720E /* info.png in Resources */,
 				13761CB42074C8D800BD720E /* favourite.png in Resources */,
 				13761CBF2074C8D800BD720E /* info@3x.png in Resources */,
@@ -404,6 +425,9 @@
 				13761CBB2074C8D800BD720E /* favourite@2x.png in Resources */,
 				13761CBC2074C8D800BD720E /* favourite@3x.png in Resources */,
 				13761CAE2074C8D800BD720E /* musclesSelected.png in Resources */,
+				13E36AE22077BABC00C3EE2A /* delete@2x.png in Resources */,
+				13E36ADE2077BABC00C3EE2A /* cancel@2x.png in Resources */,
+				13E36AE32077BABC00C3EE2A /* cancel@3x.png in Resources */,
 				13485812207641D6006628A7 /* back.png in Resources */,
 				13761CB82074C8D800BD720E /* info@2x.png in Resources */,
 				13761CB92074C8D800BD720E /* infoSelected@2x.png in Resources */,

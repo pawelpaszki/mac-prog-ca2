@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aBz-aT-ZYV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aBz-aT-ZYV">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HoeflerText.ttc">
-            <string>HoeflerText-Black</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Muscles-->
         <scene sceneID="f7r-4C-n5G">
@@ -384,6 +379,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="163" height="163"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqk-66-muw" userLabel="toggleFavourite">
+                                                    <rect key="frame" x="127" y="133" width="16" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="bsj-nE-qJq"/>
+                                                    </constraints>
+                                                    <state key="normal" image="favouriteSelected"/>
+                                                </button>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwB-A7-wyH" userLabel="remove">
+                                                    <rect key="frame" x="69" y="133" width="25" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="TL1-b7-tbx"/>
+                                                    </constraints>
+                                                    <state key="normal" image="delete.png"/>
+                                                </button>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFI-gc-WhA" userLabel="cancel">
+                                                    <rect key="frame" x="20" y="133" width="25" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="lzR-5d-gP6"/>
+                                                    </constraints>
+                                                    <state key="normal" image="cancel.png"/>
+                                                    <connections>
+                                                        <action selector="cancelPressed:" destination="R1q-l8-39F" eventType="touchUpInside" id="x49-It-8Et"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-eJ-iSL">
                                                     <rect key="frame" x="0.0" y="133" width="163" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -391,15 +410,17 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUh-rR-Bxb">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUh-rR-Bxb">
                                                     <rect key="frame" x="0.0" y="0.0" width="163" height="163"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="163" id="KYM-ld-cSk"/>
+                                                        <constraint firstAttribute="width" constant="163" id="dm5-ex-yYZ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                                     <state key="normal">
                                                         <color key="titleColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="buttonPressed:" destination="R1q-l8-39F" eventType="touchUpInside" id="Zlu-N9-gT9"/>
                                                         <segue destination="nr8-K8-8Qb" kind="show" identifier="showExercise" animates="NO" id="i1a-qC-PM0"/>
                                                     </connections>
                                                 </button>
@@ -410,11 +431,28 @@
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="QwB-A7-wyH" firstAttribute="centerX" secondItem="R1q-l8-39F" secondAttribute="centerX" id="1GJ-9P-bTF"/>
+                                            <constraint firstAttribute="bottom" secondItem="WFI-gc-WhA" secondAttribute="bottom" id="B7v-fp-3nQ"/>
+                                            <constraint firstItem="lqk-66-muw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QwB-A7-wyH" secondAttribute="trailing" constant="12" id="CKs-G6-Ppq"/>
+                                            <constraint firstItem="WFI-gc-WhA" firstAttribute="leading" secondItem="R1q-l8-39F" secondAttribute="leading" constant="20" id="EpF-NH-zAi"/>
+                                            <constraint firstItem="QwB-A7-wyH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="R1q-l8-39F" secondAttribute="top" constant="133" id="Fz2-B5-rWY"/>
+                                            <constraint firstItem="QwB-A7-wyH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WFI-gc-WhA" secondAttribute="trailing" constant="18" id="LeD-1e-MQg"/>
+                                            <constraint firstAttribute="trailing" secondItem="lqk-66-muw" secondAttribute="trailing" constant="20" id="ZDY-PR-3Fb"/>
+                                            <constraint firstAttribute="bottom" secondItem="lqk-66-muw" secondAttribute="bottom" id="bVJ-OB-dUZ"/>
+                                            <constraint firstItem="bUh-rR-Bxb" firstAttribute="leading" secondItem="R1q-l8-39F" secondAttribute="leading" id="cfC-Vq-Dfz"/>
+                                            <constraint firstItem="WFI-gc-WhA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="R1q-l8-39F" secondAttribute="top" constant="133" id="hRv-DU-bIU"/>
+                                            <constraint firstAttribute="bottom" secondItem="QwB-A7-wyH" secondAttribute="bottom" id="sD1-3v-919"/>
+                                            <constraint firstItem="bUh-rR-Bxb" firstAttribute="top" secondItem="R1q-l8-39F" secondAttribute="top" id="xH4-4G-vOM"/>
+                                        </constraints>
                                         <size key="customSize" width="163" height="163"/>
                                         <connections>
+                                            <outlet property="cancel" destination="WFI-gc-WhA" id="lgH-mN-5PY"/>
                                             <outlet property="cellButton" destination="bUh-rR-Bxb" id="Ze8-Ln-mMS"/>
                                             <outlet property="exerciseImage" destination="myV-6W-izE" id="5qR-iN-JBe"/>
                                             <outlet property="exerciseLabel" destination="2NK-eJ-iSL" id="HCZ-qF-Dme"/>
+                                            <outlet property="remove" destination="QwB-A7-wyH" id="99l-cW-hi1"/>
+                                            <outlet property="toggleFavourite" destination="lqk-66-muw" id="N3f-pR-wmc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -443,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VnV-OF-8JE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="-809.14542728635683"/>
+            <point key="canvasLocation" x="1314.4927536231885" y="-809.51086956521749"/>
         </scene>
         <!--Exercise View Controller-->
         <scene sceneID="OcE-IU-dNu">
@@ -555,6 +593,8 @@
     </scenes>
     <resources>
         <image name="back.png" width="25" height="25"/>
+        <image name="cancel.png" width="25" height="25"/>
+        <image name="delete.png" width="25" height="25"/>
         <image name="favourite.png" width="25" height="25"/>
         <image name="favouriteSelected" width="16" height="16"/>
         <image name="info.png" width="25" height="25"/>
@@ -563,6 +603,6 @@
         <image name="musclesSelected" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="o1W-V8-b2y"/>
+        <segue reference="i1a-qC-PM0"/>
     </inferredMetricsTieBreakers>
 </document>

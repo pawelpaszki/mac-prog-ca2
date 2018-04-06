@@ -16,11 +16,12 @@ struct Muscle: Codable {
 }
 
 struct Exercise: Codable {
-    let name:String
-    let imageURL:String
-    let videoURL:String
-    let description:[String]
-    let favourite:Bool
+    let name: String
+    let imageURL: String
+    let videoURL: String
+    let description: [String]
+    let favourite: Bool
+    let isDefault: Bool
 }
 
 class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -130,8 +131,12 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                                 var exerciseVideoURL: String = ""
                                 var exerciseDescription: [String] = []
                                 var exerciseFavourite: Bool = false
+                                var exerciseDefault: Bool = false
                                 if let exName = exercise["name"] as? String {
                                     exerciseName = exName
+                                }
+                                if let exDefault = exercise["default"] as? Bool {
+                                    exerciseDefault = exDefault
                                 }
                                 if let exImageURL = exercise["imageURL"] as? String {
                                     exerciseImageURL = exImageURL
@@ -146,7 +151,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                                     exerciseFavourite = exFavourite
                                 }
                                 let newExercise: Exercise = Exercise(name: exerciseName, imageURL: exerciseImageURL, videoURL: exerciseVideoURL,
-                                                                     description: exerciseDescription, favourite: exerciseFavourite)
+                                                                     description: exerciseDescription, favourite: exerciseFavourite, isDefault: exerciseDefault)
                                 newMuscle.exercises.append(newExercise)
                             }
                         }

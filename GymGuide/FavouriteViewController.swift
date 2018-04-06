@@ -103,6 +103,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
                                 var exerciseImageURL: String = ""
                                 var exerciseVideoURL: String = ""
                                 var exerciseDescription: [String] = []
+                                var exerciseDefault: Bool = false
                                 if let exName = exercise["name"] as? String {
                                     exerciseName = exName
                                 }
@@ -115,9 +116,12 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
                                 if let exDescription = exercise["description"] as? [String] {
                                     exerciseDescription = exDescription
                                 }
+                                if let exDefault = exercise["default"] as? Bool {
+                                    exerciseDefault = exDefault
+                                }
                                 
                                 let newExercise: Exercise = Exercise(name: exerciseName, imageURL: exerciseImageURL, videoURL: exerciseVideoURL,
-                                                                     description: exerciseDescription, favourite: exerciseFavourite)
+                                                                     description: exerciseDescription, favourite: exerciseFavourite, isDefault: exerciseDefault         )
                                 self.exercises.append(newExercise)
                             }
                         }
