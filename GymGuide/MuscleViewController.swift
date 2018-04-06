@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ANLoader
 
 struct Muscle: Codable {
     let name: String
@@ -90,6 +91,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     func getMuscleData() {
         self.muscles = []
+        ANLoader.showLoading("Loading", disableUI: true)
         let endpoint: String = "https://mac-prog.herokuapp.com/api/muscles"
         guard let url = URL(string: endpoint) else {
             print("Error: cannot create URL")
@@ -154,6 +156,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                     }
                     DispatchQueue.main.async {
                         self.collectionView.reloadData()
+                        ANLoader.hide()
                     }
                     
                 }

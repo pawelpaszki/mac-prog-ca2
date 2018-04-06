@@ -8,6 +8,7 @@
 
 import UIKit
 import YouTubePlayer
+import ANLoader
 
 class ExerciseViewController: UIViewController {
     
@@ -85,6 +86,7 @@ class ExerciseViewController: UIViewController {
     @IBOutlet weak var descLabel: UILabel!
     
     @IBAction func favPressed(_ sender: UIBarButtonItem) {
+        ANLoader.showLoading("Loading", disableUI: true)
         let url = URL(string: "https://mac-prog.herokuapp.com/api/muscles")!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -105,6 +107,7 @@ class ExerciseViewController: UIViewController {
             
             let responseString = String(data: data, encoding: .utf8)
             print("responseString = \(String(describing: responseString))")
+            ANLoader.hide()
         }
         task.resume()
     }

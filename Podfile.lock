@@ -1,12 +1,24 @@
 PODS:
+  - ANLoader (1.1.1)
   - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
+  - ANLoader (from `https://github.com/ANSCoder/ANLoader.git`)
   - YouTubePlayer
 
+EXTERNAL SOURCES:
+  ANLoader:
+    :git: https://github.com/ANSCoder/ANLoader.git
+
+CHECKOUT OPTIONS:
+  ANLoader:
+    :commit: 8813fb34960973bd9b7199b6461442bfe7ec4c36
+    :git: https://github.com/ANSCoder/ANLoader.git
+
 SPEC CHECKSUMS:
+  ANLoader: a77cf1634bd0f021647d385b1dfce51531b47d87
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 8a1b53c9c5817983207f78486af479f3784121e9
+PODFILE CHECKSUM: 6d2fabc9d4af9748e6920aceb606b11cd543fca0
 
 COCOAPODS: 1.4.0
