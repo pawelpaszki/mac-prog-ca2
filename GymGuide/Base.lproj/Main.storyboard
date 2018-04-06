@@ -395,6 +395,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="favourite.png" id="80R-8q-42Z">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="favPressed:" destination="nr8-K8-8Qb" id="XaI-Lr-CNO"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>

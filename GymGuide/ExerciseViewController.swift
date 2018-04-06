@@ -12,6 +12,7 @@ import YouTubePlayer
 class ExerciseViewController: UIViewController {
     
     var exercise: Exercise!
+    var favourite: Bool!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,7 +32,18 @@ class ExerciseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navTopBar.title = exercise.name
-        print(exercise.description)
+        let userDefaults = UserDefaults.standard
+        let favouriteChanged = userDefaults.bool(forKey: "favouriteChanged")
+        if favouriteChanged == false {
+            favourite = exercise.favourite
+        } else {
+            let favouriteArray = userDefaults.object(forKey: "favourite") as? [String] ?? [String]()
+            for (index, _) in favouriteArray.enumerated() {
+                if favouriteArray[index] == exercise.name {
+                    favourite = favouriteArray[index + 1] == "true" ? true : false
+                }
+            }
+        }
         var descriptionText: String = ""
         for (index, _) in exercise.description.enumerated() {
             let desc: String = exercise.description[index]
@@ -41,11 +53,59 @@ class ExerciseViewController: UIViewController {
         self.descLabel.text = descriptionText
         self.descLabel.sizeToFit()
         playerView.loadVideoID(exercise.videoURL)
-        if self.exercise.favourite == true {
+        self.setFavImage(changed: false)
+    }
+    
+    func setFavImage(changed: Bool) {
+        let userDefaults = UserDefaults.standard
+        if changed {
+            userDefaults.set(true, forKey:"favouriteChanged")
+            self.favourite = !self.favourite
+            var favouriteArray = userDefaults.object(forKey: "favourite") as? [String] ?? [String]()
+            var entryPresent: Bool = false
+            for (index, _) in favouriteArray.enumerated() {
+                if favouriteArray[index] == exercise.name {
+                    entryPresent = true
+                    favouriteArray[index + 1] = self.favourite == true ? "true" : "false"
+                }
+            }
+            if entryPresent == false {
+                favouriteArray.append(exercise.name)
+                favouriteArray.append(self.favourite == true ? "true" : "false")
+            }
+            userDefaults.set(favouriteArray, forKey: "favourite")
+        }
+        if self.favourite == true {
             favIndicator.image = UIImage(named: "favouriteSelected")
+        } else {
+            favIndicator.image = UIImage(named: "favourite")
         }
     }
     
     @IBOutlet weak var descLabel: UILabel!
     
+    @IBAction func favPressed(_ sender: UIBarButtonItem) {
+        let url = URL(string: "https://mac-prog.herokuapp.com/api/muscles")!
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "PUT"
+        let postString = "exerciseName=" + exercise.name
+        request.httpBody = postString.data(using: .utf8)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 {           // check for http errors
+                DispatchQueue.main.async {
+                    self.setFavImage(changed: true)
+                }
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(String(describing: responseString))")
+        }
+        task.resume()
+    }
 }

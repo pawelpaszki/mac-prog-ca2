@@ -31,6 +31,9 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         getMuscleData()
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(false, forKey:"favouriteChanged")
+        userDefaults.set([], forKey: "favourite")
         // Do any additional setup after loading the view, typically from a nib.
     }
     
