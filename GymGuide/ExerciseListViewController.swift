@@ -6,6 +6,7 @@
 //  Copyright © 2018 Pawel Paszki. All rights reserved.
 //
 import UIKit
+import ANLoader
 
 extension UIViewController {
     func performSegueToReturnBack()  {
@@ -63,10 +64,48 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
         }
         
         cell.deleteTapHandler = {
-            print("delete clicked")
+            self.deleteExercise(name: self.muscle.exercises[indexPath.row].name)
         }
         
         return cell
+    }
+    
+    func deleteExercise(name: String) {
+        ANLoader.showLoading("Loading", disableUI: true)
+        let url = URL(string: "https://mac-prog.herokuapp.com/api/muscles/deleteExercise")!
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        let postString = "exerciseName=" + name
+        request.httpBody = postString.data(using: .utf8)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 {
+                DispatchQueue.main.async {
+                    var exerciseIndex: Int = 0
+                    for (index, _) in self.muscle.exercises.enumerated() {
+                        if self.muscle.exercises[index].name == name {
+                            exerciseIndex = index
+                            break
+                        }
+                    }
+                    self.muscle.exercises.remove(at: exerciseIndex)
+                    let userDefaults = UserDefaults.standard
+                    userDefaults.set(true, forKey:"exerciseChanged")
+                    self.collectionView.reloadData()
+                    ANLoader.hide()
+                }
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(String(describing: responseString))")
+            ANLoader.hide()
+        }
+        task.resume()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

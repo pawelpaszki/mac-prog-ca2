@@ -41,7 +41,8 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
  
     }
     
-    @objc func deleteTap(_ sender: UIGestureRecognizer){
+    @objc func deleteTap(_ sender: UIGestureRecognizer) {
+        self.hideControls()
         deleteTapHandler?()
     }
     
@@ -49,12 +50,16 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
         tapHandler?()
     }
     
-    @IBAction func cancelPressed(_ sender: UIButton) {
+    func hideControls() {
         exerciseLabel.isHidden = false
         cancel.isHidden = true
         remove.isHidden = true
         cellButton.isHidden = false
         defaultLabel.isHidden = true
+    }
+    
+    @IBAction func cancelPressed(_ sender: UIButton) {
+        self.hideControls()
     }
     
     @objc func longTap(_ sender: UIGestureRecognizer){
