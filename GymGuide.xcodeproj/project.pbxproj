@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133F01D92077647700BED43B /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F01D82077647700BED43B /* FavouriteViewController.swift */; };
+		133F01DB2077665800BED43B /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F01DA2077665800BED43B /* FavouriteCollectionViewCell.swift */; };
 		1348580B207637E4006628A7 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1348580A207637E4006628A7 /* ExerciseViewController.swift */; };
 		13485810207641D6006628A7 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1348580D207641D5006628A7 /* back@2x.png */; };
 		13485811207641D6006628A7 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1348580E207641D5006628A7 /* back@3x.png */; };
@@ -65,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		06C8079EDCFE08C43307C1AF /* Pods-GymGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymGuide/Pods-GymGuide.release.xcconfig"; sourceTree = "<group>"; };
+		133F01D82077647700BED43B /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		133F01DA2077665800BED43B /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		1348580A207637E4006628A7 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		1348580D207641D5006628A7 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		1348580E207641D5006628A7 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				13761CCA207559FF00BD720E /* ExerciseListViewController.swift */,
 				13761CCC2075741000BD720E /* ExerciseCollectionViewCell.swift */,
 				1348580A207637E4006628A7 /* ExerciseViewController.swift */,
+				133F01D82077647700BED43B /* FavouriteViewController.swift */,
+				133F01DA2077665800BED43B /* FavouriteCollectionViewCell.swift */,
 			);
 			path = GymGuide;
 			sourceTree = "<group>";
@@ -580,8 +586,10 @@
 			files = (
 				13761CCB207559FF00BD720E /* ExerciseListViewController.swift in Sources */,
 				13761CC920750AAC00BD720E /* MuscleCollectionViewCell.swift in Sources */,
+				133F01DB2077665800BED43B /* FavouriteCollectionViewCell.swift in Sources */,
 				13761CCD2075741000BD720E /* ExerciseCollectionViewCell.swift in Sources */,
 				13761CC12074C9D900BD720E /* AboutViewController.swift in Sources */,
+				133F01D92077647700BED43B /* FavouriteViewController.swift in Sources */,
 				13761CC32074CA7100BD720E /* TabBarController.swift in Sources */,
 				13761C702074C7BB00BD720E /* MuscleViewController.swift in Sources */,
 				1348580B207637E4006628A7 /* ExerciseViewController.swift in Sources */,

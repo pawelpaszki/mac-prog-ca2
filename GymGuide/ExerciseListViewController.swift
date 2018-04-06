@@ -60,7 +60,6 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
         
         cell.tapHandler = {
             self.performSegue(withIdentifier: "showExercise", sender: self.muscle.exercises[indexPath.row].name)
-            //print(self.muscles[indexPath.row].name)
         }
         
         return cell
