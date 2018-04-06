@@ -34,9 +34,19 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
         super.viewDidLoad()
         getMuscleData()
         let userDefaults = UserDefaults.standard
-        userDefaults.set(false, forKey:"favouriteChanged")
+        userDefaults.set(false, forKey:"exerciseChanged")
         userDefaults.set([], forKey: "favourite")
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "Muscle groups"
+        let userDefaults = UserDefaults.standard
+        let favouriteChanged = userDefaults.bool(forKey: "exerciseChanged")
+        if favouriteChanged == true {
+            getMuscleData()
+            userDefaults.set(false, forKey:"exerciseChanged")
+            userDefaults.set([], forKey: "favourite")
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -77,11 +87,6 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                 
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationItem.title = "Muscle groups"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "HoeflerText-BlackItalic", size: 24)!]
     }
 
     override func didReceiveMemoryWarning() {

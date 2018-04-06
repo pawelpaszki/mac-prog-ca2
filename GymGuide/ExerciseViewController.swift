@@ -34,7 +34,7 @@ class ExerciseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navTopBar.title = exercise.name
         let userDefaults = UserDefaults.standard
-        let favouriteChanged = userDefaults.bool(forKey: "favouriteChanged")
+        let favouriteChanged = userDefaults.bool(forKey: "exerciseChanged")
         if favouriteChanged == false {
             favourite = exercise.favourite
         } else {
@@ -60,7 +60,7 @@ class ExerciseViewController: UIViewController {
     func setFavImage(changed: Bool) {
         let userDefaults = UserDefaults.standard
         if changed {
-            userDefaults.set(true, forKey:"favouriteChanged")
+            userDefaults.set(true, forKey:"exerciseChanged")
             self.favourite = !self.favourite
             var favouriteArray = userDefaults.object(forKey: "favourite") as? [String] ?? [String]()
             var entryPresent: Bool = false

@@ -62,6 +62,10 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
             self.performSegue(withIdentifier: "showExercise", sender: self.muscle.exercises[indexPath.row].name)
         }
         
+        cell.deleteTapHandler = {
+            print("delete clicked")
+        }
+        
         return cell
     }
     
