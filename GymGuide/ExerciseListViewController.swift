@@ -70,6 +70,11 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
         return cell
     }
     
+    
+    @IBAction func composeTapped(_ sender: UIBarButtonItem) {
+        print("compose")
+    }
+    
     func deleteExercise(name: String) {
         ANLoader.showLoading("Loading", disableUI: true)
         let url = URL(string: "https://mac-prog.herokuapp.com/api/muscles/deleteExercise")!
@@ -109,13 +114,20 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let exerciseName = sender as? String
-        for exercise in self.muscle.exercises {
-            if exerciseName == exercise.name {
-                if let vc: ExerciseViewController = segue.destination as? ExerciseViewController {
-                    vc.exercise = exercise
-                    break
+        if segue.identifier == "showExercise" {
+            let exerciseName = sender as? String
+            for exercise in self.muscle.exercises {
+                if exerciseName == exercise.name {
+                    if let vc: ExerciseViewController = segue.destination as? ExerciseViewController {
+                        vc.exercise = exercise
+                        break
+                    }
                 }
+            }
+        } else {
+            let name = self.muscle.name
+            if let vc: AddExerciseViewController = segue.destination as? AddExerciseViewController {
+                vc.muscleName = name
             }
         }
     }
