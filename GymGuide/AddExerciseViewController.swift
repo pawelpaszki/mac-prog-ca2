@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ANLoader
+import Alamofire
 
 class AddExerciseViewController: UIViewController {
     
@@ -74,6 +76,37 @@ class AddExerciseViewController: UIViewController {
     
     @IBAction func createExercisePressed(_ sender: UIButton) {
         if allRequiredFieldsNotEmpty() {
+            ANLoader.showLoading("Loading", disableUI: true)
+            var descriptionArrayString: String = ""
+            for textField in descriptionTextFieldCollection {
+                if (textField.text?.count)! > 0 {
+                    descriptionArrayString += textField.text! + ","
+                }
+            }
+            let description = String(descriptionArrayString.dropLast())
+            print(description)
+            let name: String = muscleName
+            let exerciseName: String = exerciseNameTextField.text!
+            let videoURL: String = videoIdTextField.text!
+            let imageURL: String = imageUrlTextField.text!
+            let urlString = "https://mac-prog.herokuapp.com/api/muscles/exercises"
+            let json = "{\"muscleName\":" + "\"" + name + "\",\"exerciseName\":\"" + exerciseName +
+                "\",\"videoURL\":\"" + videoURL + "\",\"imageURL\":\"" + imageURL +
+                "\",\"description\":\"" + description + "\"}"
+            
+            let url = URL(string: urlString)!
+            let jsonData = json.data(using: .utf8, allowLossyConversion: false)!
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = HTTPMethod.post.rawValue
+            request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+            request.httpBody = jsonData
+            
+            Alamofire.request(request).responseJSON {
+                (response) in
+                ANLoader.hide()
+                print(response)
+            }
             
         } else {
             if exerciseNameTextField.text!.count == 0 {

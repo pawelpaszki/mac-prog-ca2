@@ -61,7 +61,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let url = URL(string: muscle.imageURL)
         
-        var image:UIImage = UIImage(named: "info")!
+        var image:UIImage = UIImage(named: "noImage")!
         
         let data = try? Data(contentsOf: url!)
         DispatchQueue.main.async {

@@ -8,6 +8,7 @@ target 'GymGuide' do
   # Pods for GymGuide
   pod 'YouTubePlayer'
   pod 'ANLoader', :git => 'https://github.com/ANSCoder/ANLoader.git'
+  pod 'Alamofire'
 
   target 'GymGuideTests' do
     inherit! :search_paths

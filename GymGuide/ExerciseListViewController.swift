@@ -51,11 +51,13 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
         
         let url = URL(string: exercise.imageURL)
         
-        var image:UIImage = UIImage(named: "info")!
+        var image:UIImage = UIImage(named: "noImage")!
         
         let data = try? Data(contentsOf: url!)
         DispatchQueue.main.async {
-            image = UIImage(data: data!)!
+            if (data != nil) {
+                image = (UIImage(data: (data)!))!
+            }
             cell.displayContent(image: image, title: exercise.name, isDefault: exercise.isDefault)
         }
         

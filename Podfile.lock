@@ -1,8 +1,10 @@
 PODS:
+  - Alamofire (4.6.0)
   - ANLoader (1.1.1)
   - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
+  - Alamofire
   - ANLoader (from `https://github.com/ANSCoder/ANLoader.git`)
   - YouTubePlayer
 
@@ -16,9 +18,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ANSCoder/ANLoader.git
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   ANLoader: a77cf1634bd0f021647d385b1dfce51531b47d87
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 6d2fabc9d4af9748e6920aceb606b11cd543fca0
+PODFILE CHECKSUM: 8e08579c3e539aab8a459cd8a3ec4867583e546f
 
 COCOAPODS: 1.4.0
