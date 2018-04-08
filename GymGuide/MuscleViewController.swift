@@ -42,8 +42,10 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
         navigationItem.title = "Muscle groups"
         let userDefaults = UserDefaults.standard
         let favouriteChanged = userDefaults.bool(forKey: "exerciseChanged")
-        if favouriteChanged == true {
+        let exerciseAdded = userDefaults.bool(forKey: "exerciseAdded")
+        if favouriteChanged == true || exerciseAdded == true{
             getMuscleData()
+            userDefaults.set(false, forKey:"exerciseAdded")
             userDefaults.set(false, forKey:"exerciseChanged")
             userDefaults.set([], forKey: "favourite")
         }

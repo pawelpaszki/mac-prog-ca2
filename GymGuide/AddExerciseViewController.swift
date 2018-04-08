@@ -35,6 +35,10 @@ class AddExerciseViewController: UIViewController {
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
+        goBack()
+    }
+    
+    func goBack() {
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
         } else {
@@ -80,11 +84,12 @@ class AddExerciseViewController: UIViewController {
             var descriptionArrayString: String = ""
             for textField in descriptionTextFieldCollection {
                 if (textField.text?.count)! > 0 {
-                    descriptionArrayString += textField.text! + ","
+                    descriptionArrayString += textField.text! + "<->"
                 }
             }
-            let description = String(descriptionArrayString.dropLast())
-            print(description)
+            var description = String(descriptionArrayString.dropLast())
+            description = String(description.dropLast())
+            description = String(description.dropLast())
             let name: String = muscleName
             let exerciseName: String = exerciseNameTextField.text!
             let videoURL: String = videoIdTextField.text!
@@ -104,8 +109,11 @@ class AddExerciseViewController: UIViewController {
             
             Alamofire.request(request).responseJSON {
                 (response) in
+                let userDefaults = UserDefaults.standard
+                userDefaults.set(true, forKey:"exerciseAdded")
                 ANLoader.hide()
                 print(response)
+                self.goBack()
             }
             
         } else {

@@ -33,6 +33,15 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
     
     override func viewWillAppear(_ animated: Bool) {
         self.navTopBar.title = muscle.name
+        let userDefaults = UserDefaults.standard
+        let exerciseAdded = userDefaults.bool(forKey: "exerciseAdded")
+        if exerciseAdded == true {
+            if let nav = self.navigationController {
+                nav.popViewController(animated: true)
+            } else {
+                self.dismiss(animated: false, completion: nil)
+            }
+        }
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
