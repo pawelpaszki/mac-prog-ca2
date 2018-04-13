@@ -17,15 +17,10 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getFavourite()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let userDefaults = UserDefaults.standard
-        let favouriteChanged = userDefaults.bool(forKey: "exerciseChanged")
-        if favouriteChanged == true {
-            getFavourite()
-        }
+        getFavourite()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

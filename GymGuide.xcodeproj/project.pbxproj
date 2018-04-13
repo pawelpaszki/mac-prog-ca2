@@ -10,12 +10,6 @@
 		133F01D92077647700BED43B /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F01D82077647700BED43B /* FavouriteViewController.swift */; };
 		133F01DB2077665800BED43B /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F01DA2077665800BED43B /* FavouriteCollectionViewCell.swift */; };
 		1348580B207637E4006628A7 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1348580A207637E4006628A7 /* ExerciseViewController.swift */; };
-		13485810207641D6006628A7 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1348580D207641D5006628A7 /* back@2x.png */; };
-		13485811207641D6006628A7 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1348580E207641D5006628A7 /* back@3x.png */; };
-		13485812207641D6006628A7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 1348580F207641D6006628A7 /* back.png */; };
-		134A354F20793671000DD120 /* noImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134A354C20793671000DD120 /* noImage@2x.png */; };
-		134A355020793671000DD120 /* noImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 134A354D20793671000DD120 /* noImage.png */; };
-		134A355120793671000DD120 /* noImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134A354E20793671000DD120 /* noImage@3x.png */; };
 		13761C6E2074C7BB00BD720E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761C6D2074C7BB00BD720E /* AppDelegate.swift */; };
 		13761C702074C7BB00BD720E /* MuscleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761C6F2074C7BB00BD720E /* MuscleViewController.swift */; };
 		13761C732074C7BB00BD720E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13761C712074C7BB00BD720E /* Main.storyboard */; };
@@ -28,36 +22,9 @@
 		13761CC920750AAC00BD720E /* MuscleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CC820750AAC00BD720E /* MuscleCollectionViewCell.swift */; };
 		13761CCB207559FF00BD720E /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CCA207559FF00BD720E /* ExerciseListViewController.swift */; };
 		13761CCD2075741000BD720E /* ExerciseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13761CCC2075741000BD720E /* ExerciseCollectionViewCell.swift */; };
-		13E36ADE2077BABC00C3EE2A /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36AD82077BAB800C3EE2A /* cancel@2x.png */; };
-		13E36ADF2077BABC00C3EE2A /* delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36AD92077BAB900C3EE2A /* delete@3x.png */; };
-		13E36AE02077BABC00C3EE2A /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36ADA2077BABA00C3EE2A /* cancel.png */; };
-		13E36AE12077BABC00C3EE2A /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36ADB2077BABA00C3EE2A /* delete.png */; };
-		13E36AE22077BABC00C3EE2A /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36ADC2077BABB00C3EE2A /* delete@2x.png */; };
-		13E36AE32077BABC00C3EE2A /* cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36ADD2077BABC00C3EE2A /* cancel@3x.png */; };
-		13E36AE72077EC3900C3EE2A /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36AE42077EC3600C3EE2A /* plus@2x.png */; };
-		13E36AE82077EC3900C3EE2A /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36AE52077EC3700C3EE2A /* plus.png */; };
-		13E36AE92077EC3900C3EE2A /* plus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E36AE62077EC3800C3EE2A /* plus@3x.png */; };
 		13E36AEB2077F04B00C3EE2A /* AddExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E36AEA2077F04B00C3EE2A /* AddExerciseViewController.swift */; };
 		54699ED8788EA504C6AE18E5 /* Pods_GymGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F8A72EF233446904ECB8C9 /* Pods_GymGuide.framework */; };
 		6DB527EC8C89C5D49F262EC8 /* Pods_GymGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5CED523ABF23DD54941F08 /* Pods_GymGuideTests.framework */; };
-		84CB1132208096F000A32B01 /* favouriteSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1120208096EF00A32B01 /* favouriteSelected@3x.png */; };
-		84CB1133208096F000A32B01 /* infoSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1121208096EF00A32B01 /* infoSelected.png */; };
-		84CB1134208096F000A32B01 /* favourite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1122208096EF00A32B01 /* favourite@2x.png */; };
-		84CB1135208096F000A32B01 /* muscles.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1123208096EF00A32B01 /* muscles.png */; };
-		84CB1136208096F000A32B01 /* musclesSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1124208096EF00A32B01 /* musclesSelected@3x.png */; };
-		84CB1137208096F000A32B01 /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1125208096EF00A32B01 /* info@3x.png */; };
-		84CB1138208096F000A32B01 /* infoSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1126208096EF00A32B01 /* infoSelected@3x.png */; };
-		84CB1139208096F000A32B01 /* muscles@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1127208096F000A32B01 /* muscles@2x.png */; };
-		84CB113A208096F000A32B01 /* musclesSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1128208096F000A32B01 /* musclesSelected.png */; };
-		84CB113B208096F000A32B01 /* favourite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1129208096F000A32B01 /* favourite@3x.png */; };
-		84CB113C208096F000A32B01 /* infoSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB112A208096F000A32B01 /* infoSelected@2x.png */; };
-		84CB113D208096F000A32B01 /* muscles@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB112B208096F000A32B01 /* muscles@3x.png */; };
-		84CB113E208096F000A32B01 /* favouriteSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB112C208096F000A32B01 /* favouriteSelected.png */; };
-		84CB113F208096F000A32B01 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB112D208096F000A32B01 /* info@2x.png */; };
-		84CB1140208096F000A32B01 /* musclesSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB112E208096F000A32B01 /* musclesSelected@2x.png */; };
-		84CB1141208096F000A32B01 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB112F208096F000A32B01 /* info.png */; };
-		84CB1142208096F000A32B01 /* favouriteSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1130208096F000A32B01 /* favouriteSelected@2x.png */; };
-		84CB1143208096F000A32B01 /* favourite.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CB1131208096F000A32B01 /* favourite.png */; };
 		D865B1282079118EAA1A6308 /* Pods_GymGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FFF337DA4B8715F5DDD447 /* Pods_GymGuideUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,12 +50,6 @@
 		133F01D82077647700BED43B /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		133F01DA2077665800BED43B /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		1348580A207637E4006628A7 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
-		1348580D207641D5006628A7 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
-		1348580E207641D5006628A7 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
-		1348580F207641D6006628A7 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		134A354C20793671000DD120 /* noImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noImage@2x.png"; sourceTree = "<group>"; };
-		134A354D20793671000DD120 /* noImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage.png; sourceTree = "<group>"; };
-		134A354E20793671000DD120 /* noImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noImage@3x.png"; sourceTree = "<group>"; };
 		13761C6A2074C7BB00BD720E /* GymGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13761C6D2074C7BB00BD720E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13761C6F2074C7BB00BD720E /* MuscleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleViewController.swift; sourceTree = "<group>"; };
@@ -107,36 +68,9 @@
 		13761CC820750AAC00BD720E /* MuscleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleCollectionViewCell.swift; sourceTree = "<group>"; };
 		13761CCA207559FF00BD720E /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
 		13761CCC2075741000BD720E /* ExerciseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewCell.swift; sourceTree = "<group>"; };
-		13E36AD82077BAB800C3EE2A /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
-		13E36AD92077BAB900C3EE2A /* delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@3x.png"; sourceTree = "<group>"; };
-		13E36ADA2077BABA00C3EE2A /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
-		13E36ADB2077BABA00C3EE2A /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
-		13E36ADC2077BABB00C3EE2A /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
-		13E36ADD2077BABC00C3EE2A /* cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@3x.png"; sourceTree = "<group>"; };
-		13E36AE42077EC3600C3EE2A /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
-		13E36AE52077EC3700C3EE2A /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
-		13E36AE62077EC3800C3EE2A /* plus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@3x.png"; sourceTree = "<group>"; };
 		13E36AEA2077F04B00C3EE2A /* AddExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseViewController.swift; sourceTree = "<group>"; };
 		17FFF337DA4B8715F5DDD447 /* Pods_GymGuideUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymGuideUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7277786540A636D36CB72378 /* Pods-GymGuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymGuideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymGuideUITests/Pods-GymGuideUITests.release.xcconfig"; sourceTree = "<group>"; };
-		84CB1120208096EF00A32B01 /* favouriteSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favouriteSelected@3x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/favouriteSelected@3x.png"; sourceTree = "<group>"; };
-		84CB1121208096EF00A32B01 /* infoSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = infoSelected.png; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/infoSelected.png"; sourceTree = "<group>"; };
-		84CB1122208096EF00A32B01 /* favourite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favourite@2x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/favourite@2x.png"; sourceTree = "<group>"; };
-		84CB1123208096EF00A32B01 /* muscles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = muscles.png; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/muscles.png"; sourceTree = "<group>"; };
-		84CB1124208096EF00A32B01 /* musclesSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "musclesSelected@3x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/musclesSelected@3x.png"; sourceTree = "<group>"; };
-		84CB1125208096EF00A32B01 /* info@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@3x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/info@3x.png"; sourceTree = "<group>"; };
-		84CB1126208096EF00A32B01 /* infoSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "infoSelected@3x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/infoSelected@3x.png"; sourceTree = "<group>"; };
-		84CB1127208096F000A32B01 /* muscles@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "muscles@2x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/muscles@2x.png"; sourceTree = "<group>"; };
-		84CB1128208096F000A32B01 /* musclesSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = musclesSelected.png; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/musclesSelected.png"; sourceTree = "<group>"; };
-		84CB1129208096F000A32B01 /* favourite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favourite@3x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/favourite@3x.png"; sourceTree = "<group>"; };
-		84CB112A208096F000A32B01 /* infoSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "infoSelected@2x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/infoSelected@2x.png"; sourceTree = "<group>"; };
-		84CB112B208096F000A32B01 /* muscles@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "muscles@3x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/muscles@3x.png"; sourceTree = "<group>"; };
-		84CB112C208096F000A32B01 /* favouriteSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favouriteSelected.png; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/favouriteSelected.png"; sourceTree = "<group>"; };
-		84CB112D208096F000A32B01 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@2x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/info@2x.png"; sourceTree = "<group>"; };
-		84CB112E208096F000A32B01 /* musclesSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "musclesSelected@2x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/musclesSelected@2x.png"; sourceTree = "<group>"; };
-		84CB112F208096F000A32B01 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/info.png"; sourceTree = "<group>"; };
-		84CB1130208096F000A32B01 /* favouriteSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favouriteSelected@2x.png"; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/favouriteSelected@2x.png"; sourceTree = "<group>"; };
-		84CB1131208096F000A32B01 /* favourite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favourite.png; path = "../../../Downloads/mac-prog-ca2-642a16463d3944e6c5b175f606b02de782549824/tabIcons/favourite.png"; sourceTree = "<group>"; };
 		8B5CED523ABF23DD54941F08 /* Pods_GymGuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymGuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		961565B3AE74CE85DCB06EFD /* Pods-GymGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymGuideTests/Pods-GymGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C9C51CC83B50C367D69CC26 /* Pods-GymGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymGuide/Pods-GymGuide.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,33 +107,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1348580C207641BF006628A7 /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				13E36AE52077EC3700C3EE2A /* plus.png */,
-				13E36AE42077EC3600C3EE2A /* plus@2x.png */,
-				13E36AE62077EC3800C3EE2A /* plus@3x.png */,
-				13E36ADA2077BABA00C3EE2A /* cancel.png */,
-				13E36AD82077BAB800C3EE2A /* cancel@2x.png */,
-				13E36ADD2077BABC00C3EE2A /* cancel@3x.png */,
-				13E36ADB2077BABA00C3EE2A /* delete.png */,
-				13E36ADC2077BABB00C3EE2A /* delete@2x.png */,
-				134A354D20793671000DD120 /* noImage.png */,
-				134A354C20793671000DD120 /* noImage@2x.png */,
-				134A354E20793671000DD120 /* noImage@3x.png */,
-				13E36AD92077BAB900C3EE2A /* delete@3x.png */,
-				1348580F207641D6006628A7 /* back.png */,
-				1348580D207641D5006628A7 /* back@2x.png */,
-				1348580E207641D5006628A7 /* back@3x.png */,
-			);
-			path = icons;
-			sourceTree = "<group>";
-		};
 		13761C612074C7BA00BD720E = {
 			isa = PBXGroup;
 			children = (
-				1348580C207641BF006628A7 /* icons */,
-				13761C9B2074C8CA00BD720E /* tabIcons */,
 				13761C6C2074C7BB00BD720E /* GymGuide */,
 				13761C812074C7BB00BD720E /* GymGuideTests */,
 				13761C8C2074C7BB00BD720E /* GymGuideUITests */,
@@ -257,31 +167,6 @@
 				13761C8F2074C7BB00BD720E /* Info.plist */,
 			);
 			path = GymGuideUITests;
-			sourceTree = "<group>";
-		};
-		13761C9B2074C8CA00BD720E /* tabIcons */ = {
-			isa = PBXGroup;
-			children = (
-				84CB1131208096F000A32B01 /* favourite.png */,
-				84CB1122208096EF00A32B01 /* favourite@2x.png */,
-				84CB1129208096F000A32B01 /* favourite@3x.png */,
-				84CB112C208096F000A32B01 /* favouriteSelected.png */,
-				84CB1130208096F000A32B01 /* favouriteSelected@2x.png */,
-				84CB1120208096EF00A32B01 /* favouriteSelected@3x.png */,
-				84CB112F208096F000A32B01 /* info.png */,
-				84CB112D208096F000A32B01 /* info@2x.png */,
-				84CB1125208096EF00A32B01 /* info@3x.png */,
-				84CB1121208096EF00A32B01 /* infoSelected.png */,
-				84CB112A208096F000A32B01 /* infoSelected@2x.png */,
-				84CB1126208096EF00A32B01 /* infoSelected@3x.png */,
-				84CB1123208096EF00A32B01 /* muscles.png */,
-				84CB1127208096F000A32B01 /* muscles@2x.png */,
-				84CB112B208096F000A32B01 /* muscles@3x.png */,
-				84CB1128208096F000A32B01 /* musclesSelected.png */,
-				84CB112E208096F000A32B01 /* musclesSelected@2x.png */,
-				84CB1124208096EF00A32B01 /* musclesSelected@3x.png */,
-			);
-			path = tabIcons;
 			sourceTree = "<group>";
 		};
 		6A97DB6CB740828FE0FFCE8B /* Pods */ = {
@@ -423,42 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				134A354F20793671000DD120 /* noImage@2x.png in Resources */,
-				84CB113B208096F000A32B01 /* favourite@3x.png in Resources */,
-				13E36AE72077EC3900C3EE2A /* plus@2x.png in Resources */,
-				84CB1134208096F000A32B01 /* favourite@2x.png in Resources */,
-				13485811207641D6006628A7 /* back@3x.png in Resources */,
-				13E36AE12077BABC00C3EE2A /* delete.png in Resources */,
-				13E36ADF2077BABC00C3EE2A /* delete@3x.png in Resources */,
-				84CB1141208096F000A32B01 /* info.png in Resources */,
-				13E36AE02077BABC00C3EE2A /* cancel.png in Resources */,
-				84CB113F208096F000A32B01 /* info@2x.png in Resources */,
-				134A355120793671000DD120 /* noImage@3x.png in Resources */,
-				84CB1132208096F000A32B01 /* favouriteSelected@3x.png in Resources */,
 				13761C782074C7BB00BD720E /* LaunchScreen.storyboard in Resources */,
-				84CB1139208096F000A32B01 /* muscles@2x.png in Resources */,
-				13485810207641D6006628A7 /* back@2x.png in Resources */,
-				84CB113D208096F000A32B01 /* muscles@3x.png in Resources */,
 				13761C752074C7BB00BD720E /* Assets.xcassets in Resources */,
-				84CB1133208096F000A32B01 /* infoSelected.png in Resources */,
-				84CB1138208096F000A32B01 /* infoSelected@3x.png in Resources */,
 				13761C732074C7BB00BD720E /* Main.storyboard in Resources */,
-				84CB1143208096F000A32B01 /* favourite.png in Resources */,
-				84CB113A208096F000A32B01 /* musclesSelected.png in Resources */,
-				84CB1137208096F000A32B01 /* info@3x.png in Resources */,
-				84CB1142208096F000A32B01 /* favouriteSelected@2x.png in Resources */,
-				13E36AE92077EC3900C3EE2A /* plus@3x.png in Resources */,
-				13E36AE22077BABC00C3EE2A /* delete@2x.png in Resources */,
-				13E36ADE2077BABC00C3EE2A /* cancel@2x.png in Resources */,
-				13E36AE32077BABC00C3EE2A /* cancel@3x.png in Resources */,
-				13485812207641D6006628A7 /* back.png in Resources */,
-				84CB1135208096F000A32B01 /* muscles.png in Resources */,
-				84CB1136208096F000A32B01 /* musclesSelected@3x.png in Resources */,
-				134A355020793671000DD120 /* noImage.png in Resources */,
-				13E36AE82077EC3900C3EE2A /* plus.png in Resources */,
-				84CB113E208096F000A32B01 /* favouriteSelected.png in Resources */,
-				84CB1140208096F000A32B01 /* musclesSelected@2x.png in Resources */,
-				84CB113C208096F000A32B01 /* infoSelected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

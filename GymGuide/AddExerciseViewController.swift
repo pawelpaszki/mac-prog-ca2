@@ -42,7 +42,7 @@ class AddExerciseViewController: UIViewController {
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
         } else {
-            self.dismiss(animated: false, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

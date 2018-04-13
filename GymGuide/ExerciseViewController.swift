@@ -24,7 +24,7 @@ class ExerciseViewController: UIViewController {
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
         } else {
-            self.dismiss(animated: false, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     @IBOutlet weak var favIndicator: UIBarButtonItem!

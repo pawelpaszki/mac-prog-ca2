@@ -165,6 +165,8 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                         self.muscles.append(newMuscle)
                     }
                     DispatchQueue.main.async {
+                        // sort the collection
+                        self.muscles = self.muscles.sorted(by: {$0.name < $1.name})
                         self.collectionView.reloadData()
                         ANLoader.hide()
                     }
