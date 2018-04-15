@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UITabBarItem.appearance().setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "Roboto", size: 15)!], for: UIControlState.normal)
+        UINavigationBar.appearance().titleTextAttributes = [
+            kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "Roboto", size: 15)!
+        ]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         return true
     }
 
