@@ -161,6 +161,8 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                                                                      description: exerciseDescription, favourite: exerciseFavourite, isDefault: exerciseDefault)
                                 newMuscle.exercises.append(newExercise)
                             }
+                            // sort the collection
+                            newMuscle.exercises = newMuscle.exercises.sorted(by: {$0.name < $1.name})
                         }
                         self.muscles.append(newMuscle)
                     }

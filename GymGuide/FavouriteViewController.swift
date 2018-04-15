@@ -127,6 +127,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
                         }
                     }
                     DispatchQueue.main.async {
+                        self.exercises = self.exercises.sorted(by: {$0.name < $1.name})
                         self.collectionView.reloadData()
                         ANLoader.hide()
                     }
