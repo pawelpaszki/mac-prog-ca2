@@ -38,6 +38,7 @@ class AddExerciseViewController: UIViewController {
         goBack()
     }
     
+    // back button: https://stackoverflow.com/questions/38741556/ios-how-to-simple-return-back-to-previous-presented-pushed-view-controller-progr
     func goBack() {
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
@@ -78,6 +79,8 @@ class AddExerciseViewController: UIViewController {
         }
     }
     
+    // send post request with data in a body:
+    // https://stackoverflow.com/questions/31982513/how-to-send-a-post-request-with-body-in-swift
     @IBAction func createExercisePressed(_ sender: UIButton) {
         if allRequiredFieldsNotEmpty() {
             ANLoader.showLoading("Loading", disableUI: true)

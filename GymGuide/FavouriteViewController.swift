@@ -85,6 +85,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
                 return
             }
             do {
+                // parse JSON: http://roadfiresoftware.com/2016/12/how-to-parse-json-with-swift-3/
                 if let data = data,
                     let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
                     let muscles = json["muscles"] as? [[String: Any]] {

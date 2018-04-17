@@ -14,6 +14,7 @@ class FavouriteCollectionViewCell: UICollectionViewCell {
     @IBOutlet var exerciseLabel: UILabel!
     @IBOutlet weak var cellButton: UIButton!
     
+    // pass a click to UIViewController https://stackoverflow.com/questions/45704441/propagate-a-custom-event-from-a-uicollectionviewcell
     var tapHandler: (()->())?
     
     func displayContent(image: UIImage, title: String) {

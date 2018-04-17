@@ -20,6 +20,7 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
     var isDefaultExercise: Bool = false
     var isFavouriteExercise: Bool = false
     
+    // pass a click to UIViewController https://stackoverflow.com/questions/45704441/propagate-a-custom-event-from-a-uicollectionviewcell
     var tapHandler: (()->())?
     
     var deleteTapHandler: (()->())?
@@ -29,6 +30,8 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
         exerciseLabel.text = title
         isDefaultExercise = isDefault
         cellButton.setTitle(title, for: .normal)
+        // long press:
+        // https://stackoverflow.com/questions/34548263/button-tap-and-long-press-gesture/34548629
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(normalTap(_:)))
         tapGesture.numberOfTapsRequired = 1
         cellButton.addGestureRecognizer(tapGesture)

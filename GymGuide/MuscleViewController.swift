@@ -24,12 +24,57 @@ struct Exercise: Codable {
     let isDefault: Bool
 }
 
-class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+// loader from: https://github.com/ANSCoder/ANLoader
+
+class MuscleViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet weak var exercisePicker: UIPickerView!
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return muscleNames.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return muscleNames[row]
+    }
+    
+    // change font of a UIPickerView:
+    // https://stackoverflow.com/questions/27455345/uipickerview-wont-allow-changing-font-name-and-size-via-delegates-attributedt
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let pickerLabel = UILabel()
+        pickerLabel.text = muscleNames[row]
+        pickerLabel.textColor = UIColor.black
+        pickerLabel.font = UIFont(name: "Roboto", size: 15)
+        pickerLabel.textAlignment = NSTextAlignment.center
+        return pickerLabel
+    }
+    
+    @IBOutlet weak var muscleImageView: UIImageView!
+    
+    // fill an UIImageView with maintaining aspect ratio
+    // https://stackoverflow.com/questions/27961884/swift-uiimageview-stretched-aspect
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        muscleImageView.image = UIImage(named: self.muscleNames[row])!
+        muscleImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleBottomMargin, .flexibleRightMargin, .flexibleLeftMargin, .flexibleTopMargin]
+        muscleImageView.contentMode = .scaleAspectFit
+        muscleImageView.clipsToBounds = true
+
+    }
     
     var muscles:[Muscle] = []
-
+    var muscleNames:[String] = []
+    
+    @IBOutlet weak var showEx: UIButton!
+    
+    
+    @IBAction func showExercisesPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "showExercises", sender: self.muscles[exercisePicker.selectedRow(inComponent: 0)].name)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getMuscleData()
@@ -38,6 +83,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
         userDefaults.set([], forKey: "favourite")
     }
     
+    // usage of local storage: https://medium.com/aviabird/the-one-with-userdefaults-aab2c2a7e170
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Muscle groups"
         let userDefaults = UserDefaults.standard
@@ -49,33 +95,10 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
             userDefaults.set(false, forKey:"exerciseChanged")
             userDefaults.set([], forKey: "favourite")
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return muscles.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let muscle: Muscle = muscles[indexPath.row]
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! MuscleCollectionViewCell
-        
-        let url = URL(string: muscle.imageURL)
-        
-        var image:UIImage = UIImage(named: "noImage")!
-        
-        let data = try? Data(contentsOf: url!)
-        DispatchQueue.main.async {
-            image = UIImage(data: data!)!
-            cell.displayContent(image: image, title: muscle.name)
-        }
-        
-        cell.tapHandler = {
-            self.performSegue(withIdentifier: "showExercises", sender: self.muscles[indexPath.row].name)
-        }
-        
-        return cell
+        showEx.backgroundColor = UIColor.black
+        muscleImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleBottomMargin, .flexibleRightMargin, .flexibleLeftMargin, .flexibleTopMargin]
+        muscleImageView.contentMode = .scaleAspectFit // OR .scaleAspectFill
+        muscleImageView.clipsToBounds = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -97,6 +120,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     func getMuscleData() {
         self.muscles = []
+        self.muscleNames = []
         ANLoader.showLoading("Loading", disableUI: true)
         let endpoint: String = "https://mac-prog.herokuapp.com/api/muscles"
         guard let url = URL(string: endpoint) else {
@@ -118,6 +142,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                 return
             }
             do {
+                // parse JSON: http://roadfiresoftware.com/2016/12/how-to-parse-json-with-swift-3/
                 if let data = data,
                     let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
                     let muscles = json["muscles"] as? [[String: Any]] {
@@ -126,6 +151,7 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                         var imageURL: String = ""
                         if let muscleName = muscle["name"] as? String {
                             name = muscleName
+                            self.muscleNames.append(muscleName)
                         }
                         if let muscleImageURL = muscle["imageURL"] as? String {
                             imageURL = muscleImageURL
@@ -167,9 +193,14 @@ class MuscleViewController: UIViewController, UICollectionViewDelegate, UICollec
                         self.muscles.append(newMuscle)
                     }
                     DispatchQueue.main.async {
-                        // sort the collection
+                        // sort the collections
                         self.muscles = self.muscles.sorted(by: {$0.name < $1.name})
-                        self.collectionView.reloadData()
+                        if self.muscleNames.count > 0 {
+                            self.muscleNames.sort()
+                            self.muscleImageView.image = UIImage(named: self.muscleNames[0])!
+                            self.exercisePicker.selectRow(0, inComponent: 0, animated: true)
+                            self.exercisePicker.delegate = self
+                        }
                         ANLoader.hide()
                     }
                 }

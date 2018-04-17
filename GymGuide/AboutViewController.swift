@@ -8,6 +8,8 @@
 
 import UIKit
 
+// create viewPager: https://medium.com/how-to-swift/how-to-create-a-uipageviewcontroller-a948047fb6af
+
 class AboutViewController: UIPageViewController
 {
     fileprivate lazy var pages: [UIViewController] = {

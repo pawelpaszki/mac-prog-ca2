@@ -8,6 +8,7 @@
 import UIKit
 import ANLoader
 
+// back button: https://stackoverflow.com/questions/38741556/ios-how-to-simple-return-back-to-previous-presented-pushed-view-controller-progr
 extension UIViewController {
     func performSegueToReturnBack()  {
         if let nav = self.navigationController {
@@ -23,15 +24,6 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
     var muscle: Muscle!
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    @IBOutlet weak var navTopBar: UINavigationItem!
-    
-    override func viewWillAppear(_ animated: Bool) {
         self.navTopBar.title = muscle.name
         let userDefaults = UserDefaults.standard
         let exerciseAdded = userDefaults.bool(forKey: "exerciseAdded")
@@ -43,13 +35,23 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
             }
         }
     }
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    @IBOutlet weak var navTopBar: UINavigationItem!
+    
+    override func viewWillAppear(_ animated: Bool) {
+       
+    }
     
     @IBAction func backPressed(_ sender: UIButton) {
         self.performSegueToReturnBack()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return muscle.exercises.count
+        return muscle?.exercises.count != nil ? muscle.exercises.count : 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,9 +60,12 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! ExerciseCollectionViewCell
         
+        
         let url = URL(string: exercise.imageURL)
         
         var image:UIImage = UIImage(named: "noImage")!
+        
+        // image from URL: https://stackoverflow.com/questions/24231680/loading-downloading-image-from-url-on-swift
         
         let data = try? Data(contentsOf: url!)
         DispatchQueue.main.async {

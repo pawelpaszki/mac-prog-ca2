@@ -10,6 +10,8 @@ import UIKit
 import YouTubePlayer
 import ANLoader
 
+// youtube player from: https://github.com/gilesvangruisen/Swift-YouTube-Player
+
 class ExerciseViewController: UIViewController {
     
     var exercise: Exercise!
@@ -20,6 +22,7 @@ class ExerciseViewController: UIViewController {
     
     @IBOutlet var playerView: YouTubePlayerView!
     
+    // back button: https://stackoverflow.com/questions/38741556/ios-how-to-simple-return-back-to-previous-presented-pushed-view-controller-progr
     @IBAction func backPressed(_ sender: Any) {
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
@@ -85,6 +88,7 @@ class ExerciseViewController: UIViewController {
     
     @IBOutlet weak var descLabel: UILabel!
     
+    // put request https://stackoverflow.com/questions/26364914/http-request-in-swift-with-post-method
     @IBAction func favPressed(_ sender: UIBarButtonItem) {
         ANLoader.showLoading("Loading", disableUI: true)
         let url = URL(string: "https://mac-prog.herokuapp.com/api/muscles")!

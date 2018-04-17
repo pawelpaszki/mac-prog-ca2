@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //   https://stackoverflow.com/questions/36728624/swift-change-tab-bar-title-font/40702422
         UITabBarItem.appearance().setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "Roboto", size: 15)!], for: UIControlState.normal)
         UINavigationBar.appearance().titleTextAttributes = [
             kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "Roboto", size: 15)!
