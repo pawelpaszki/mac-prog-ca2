@@ -24,6 +24,15 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
     var muscle: Muscle!
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    @IBOutlet weak var navTopBar: UINavigationItem!
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.navTopBar.title = muscle.name
         let userDefaults = UserDefaults.standard
         let exerciseAdded = userDefaults.bool(forKey: "exerciseAdded")
@@ -34,16 +43,6 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
                 self.dismiss(animated: false, completion: nil)
             }
         }
-    }
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    @IBOutlet weak var navTopBar: UINavigationItem!
-    
-    override func viewWillAppear(_ animated: Bool) {
-       
     }
     
     @IBAction func backPressed(_ sender: UIButton) {

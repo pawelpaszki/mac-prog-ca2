@@ -115,7 +115,6 @@ class AddExerciseViewController: UIViewController {
                 let userDefaults = UserDefaults.standard
                 userDefaults.set(true, forKey:"exerciseAdded")
                 ANLoader.hide()
-                print(response)
                 self.goBack()
             }
             
