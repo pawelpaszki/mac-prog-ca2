@@ -21,6 +21,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
     
     override func viewWillAppear(_ animated: Bool) {
         getFavourite()
+        self.collectionView.flashScrollIndicators()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

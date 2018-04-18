@@ -43,6 +43,7 @@ class ExerciseListViewController: UIViewController, UICollectionViewDelegate, UI
                 self.dismiss(animated: false, completion: nil)
             }
         }
+        self.collectionView.flashScrollIndicators()
     }
     
     @IBAction func backPressed(_ sender: UIButton) {

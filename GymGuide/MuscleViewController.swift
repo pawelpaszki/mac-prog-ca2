@@ -206,6 +206,7 @@ class MuscleViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 }
             } catch  {
                 print("error trying to convert data to JSON")
+                ANLoader.hide()
                 return
             }
         }
