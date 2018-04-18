@@ -811,12 +811,29 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3l5-Kh-TL4">
-                                <rect key="frame" x="20" y="84" width="374" height="583"/>
+                                <rect key="frame" x="20" y="84" width="374" height="1052"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="42" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjJ-z6-3dk">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="bIW-sV-4ch"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HjJ-z6-3dk" firstAttribute="leading" secondItem="3l5-Kh-TL4" secondAttribute="leading" id="Dyr-CV-wn1"/>
+                                    <constraint firstItem="HjJ-z6-3dk" firstAttribute="top" secondItem="3l5-Kh-TL4" secondAttribute="top" id="Wzp-Fc-xoV"/>
+                                    <constraint firstAttribute="bottom" secondItem="HjJ-z6-3dk" secondAttribute="bottom" constant="450" id="YoK-CV-ql8"/>
+                                    <constraint firstItem="HjJ-z6-3dk" firstAttribute="width" secondItem="3l5-Kh-TL4" secondAttribute="width" id="hL9-yW-72e"/>
+                                    <constraint firstAttribute="trailing" secondItem="HjJ-z6-3dk" secondAttribute="trailing" id="kaz-YZ-vMB"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rz1-ru-78Y" firstAttribute="bottom" secondItem="3l5-Kh-TL4" secondAttribute="bottom" constant="20" id="4D3-r9-hEx"/>
                             <constraint firstItem="3l5-Kh-TL4" firstAttribute="leading" secondItem="rz1-ru-78Y" secondAttribute="leading" constant="20" id="8C5-bk-tkg"/>
                             <constraint firstItem="rz1-ru-78Y" firstAttribute="trailing" secondItem="KyP-It-TT0" secondAttribute="trailing" id="8m1-CQ-82V"/>
                             <constraint firstItem="rz1-ru-78Y" firstAttribute="trailing" secondItem="3l5-Kh-TL4" secondAttribute="trailing" constant="20" id="JWH-Gg-J8e"/>
@@ -824,6 +841,7 @@
                             <constraint firstItem="3l5-Kh-TL4" firstAttribute="centerX" secondItem="KyP-It-TT0" secondAttribute="centerX" id="h7r-ut-9Bf"/>
                             <constraint firstItem="3l5-Kh-TL4" firstAttribute="top" secondItem="KyP-It-TT0" secondAttribute="bottom" constant="20" id="kgo-x5-2yc"/>
                             <constraint firstItem="KyP-It-TT0" firstAttribute="top" secondItem="rz1-ru-78Y" secondAttribute="top" id="obQ-kd-V4L"/>
+                            <constraint firstAttribute="bottom" secondItem="3l5-Kh-TL4" secondAttribute="bottom" constant="-400" id="rZI-LY-8L9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rz1-ru-78Y"/>
                     </view>
@@ -832,6 +850,9 @@
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="infoSelected"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="aboutText" destination="HjJ-z6-3dk" id="BZW-SE-b1D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wE-JA-HCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
